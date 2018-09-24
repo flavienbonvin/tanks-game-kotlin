@@ -1,8 +1,10 @@
 package util
 
-import com.sun.xml.internal.bind.v2.runtime.reflect.opt.Const
 import obj.Tank
-import res.Constants
+import res.ENEMY_TANKS
+import res.FILENAME_TANK_LIST
+import res.NUMBER_ENEMIES
+import res.REMAINING_TANKS
 import java.io.File
 
 fun initGame() {
@@ -17,12 +19,14 @@ fun initGame() {
 
 }
 
-private fun configSummary(){
-    println("""
+private fun configSummary() {
+    println(
+        """
         Summary of the configuration:
-        Number of enemies: ${Constants.GameConstants.nbrEnemies}
+        Number of enemies: $NUMBER_ENEMIES
         Enemies information:
-    """.trimIndent())
+    """.trimIndent()
+    )
     printEnemiesTanks()
 
     print("Is this correct? (y/n): ")
@@ -30,34 +34,33 @@ private fun configSummary(){
 
     println()
 
-    when (userInput){
+    when (userInput) {
         "y" -> gameMenu()
         "n" -> initGame()
         else -> configSummary()
     }
 }
 
-private fun createEnemiesTanks(nbrEnemies: Int){
-    Constants.GameConstants.nbrEnemies = nbrEnemies
+private fun createEnemiesTanks(nbrEnemies: Int) {
+    NUMBER_ENEMIES = nbrEnemies
     //Used to track the end of the game
-    Constants.GameConstants.remainingTanks = nbrEnemies
+    REMAINING_TANKS = nbrEnemies
     //Must empty existing enemies in case of error during the creation process
-    Constants.GameConstants.enemyTanks.removeAll { true }
+    ENEMY_TANKS.removeAll { true }
 
-    for (i in 0 until nbrEnemies){
+    for (i in 0 until nbrEnemies) {
         val tankInfo = getRandomTankName()
-        Constants.GameConstants.enemyTanks.add(Tank(tankInfo[0], tankInfo[1],10.0, true))
+        ENEMY_TANKS.add(Tank(tankInfo.first, tankInfo.second, 10.0, true))
     }
 }
 
 
-private fun getRandomTankName(): Array<String>{
-    val list = mutableListOf<String>()
-    File(Constants.GameConstants.fileNameTankList).useLines { lines -> list.addAll(lines) }
+private fun getRandomTankName(): Pair<String, String> {
+    val list = File(FILENAME_TANK_LIST).useLines { lines -> lines.toMutableList() }
 
-    val randomElement = list[(0 until list.size).shuffled().last()]
+    val randomElement = list.shuffled().last()
     val tankName = randomElement.substringBefore(";")
     val tankCountry = randomElement.substringAfter(";")
 
-    return arrayOf(tankName, tankCountry)
+    return Pair(tankName, tankCountry)
 }

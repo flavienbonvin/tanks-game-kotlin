@@ -1,4 +1,8 @@
 - [x] end the game when all the tanks are destroyed
 - [x] catch exceptions when user input an integer (avoid exception)
-- [ ] change the shoot enemy method
+- [ ] rework the shoot enemy method
 - [x] handle IndexOutOfBoundsException when firing at tanks
+- [ ] get familiar with gradle
+- [ ] rework the package organisation according to the java and kotlin conventions (avoid util package)
+- [ ] try to avoid the mutable list of tanks
+- [ ] sealed classes for tanks (avoid negative int and a boolean in the constructor)

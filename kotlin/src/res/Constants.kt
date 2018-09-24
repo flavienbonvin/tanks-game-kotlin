@@ -2,11 +2,7 @@ package res
 
 import obj.Tank
 
-object Constants {
-    object GameConstants {
-        const val fileNameTankList = "src/res/tanksNames.txt"
-        var nbrEnemies: Int = 0
-        val enemyTanks: MutableList<Tank> = mutableListOf()
-        var remainingTanks: Int = 0
-    }
-}
+const val FILENAME_TANK_LIST = "src/res/tanksNames.txt"
+var NUMBER_ENEMIES: Int = 0
+val ENEMY_TANKS: MutableList<Tank> = mutableListOf()
+var REMAINING_TANKS: Int = 0

@@ -1,22 +1,24 @@
 package util
 
-import res.Constants
+import res.REMAINING_TANKS
 import kotlin.system.exitProcess
 
-fun startMenu (){
+fun startMenu() {
 
-    println("""
+    println(
+        """
         Tank game!
 
         n - start a new game
         q - quit the game
-    """.trimIndent())
+    """.trimIndent()
+    )
     print("Action: ")
     val action = readLine()!!
 
     println()
 
-    when(action){
+    when (action) {
         "n" -> initGame()
         "q" -> quitGame()
         else -> {
@@ -26,9 +28,9 @@ fun startMenu (){
     }
 }
 
-fun gameMenu(){
+fun gameMenu() {
     //If there are no enemy left, the game is finished
-    if(Constants.GameConstants.remainingTanks == 0){
+    if (REMAINING_TANKS == 0) {
         displayWinningMenu()
     } else {
         displayGameMenu()
@@ -36,12 +38,14 @@ fun gameMenu(){
 }
 
 private fun displayGameMenu() {
-    println("""
+    println(
+        """
         Actions available:
         a - attack enemy tank
         p - print all enemies tanks
         q - quit the game
-    """.trimIndent())
+    """.trimIndent()
+    )
 
     print("Action: ")
     val action = readLine()!!
@@ -63,12 +67,14 @@ private fun displayGameMenu() {
 }
 
 private fun displayWinningMenu() {
-    println("""
+    println(
+        """
             You won! All enemies tanks has been defeated!
 
             n - start a new game
             q - quit the game
-        """.trimIndent())
+        """.trimIndent()
+    )
     print("Action: ")
     val action = readLine()!!
 
@@ -83,7 +89,7 @@ private fun displayWinningMenu() {
 }
 
 
-private fun quitGame(){
+private fun quitGame() {
     println("\nThank you for playing the game!")
     exitProcess(0)
 }
