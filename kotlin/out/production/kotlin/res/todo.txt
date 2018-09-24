@@ -1,0 +1,4 @@
+- [x] end the game when all the tanks are destroyed
+- [x] catch exceptions when user input an integer (avoid exception)
+- [ ] change the shoot enemy method
+- [x] handle IndexOutOfBoundsException when firing at tanks

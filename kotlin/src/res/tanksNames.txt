@@ -1,0 +1,34 @@
+Al-Khalid/MBT-2000;China
+AMX Leclerc;France
+AMX-40;France
+Arjun MBT;India
+C1 Ariete;Italy
+Ch'onma-ho 215/216;North Korea
+EE-T1/EE-T2 Osório;Brazil
+FV4030/4 Challenger 1;United Kingdom
+FV4030/4 Challenger 2;United Kingdom
+K1 88-obj.Tank;United State
+K1A1;South Korea
+Leopard 2;West Germany
+M-84;Yugoslavia
+M-84AS;Serbia
+M-95 Degman;Croatia
+M1 Abrams;United States
+MBT-80;United Kingdom
+Merkava Mark III;Israel
+Merkava;Israel
+Olifant Mk2;South Africa
+PT-91;Poland
+Stridsvagn;Sweden
+T-72B3;Russia
+T-72M4;Czech Republic
+T-80;Soviet Union
+T-84;Ukraine
+T-90;Russia
+Tank EX;India
+TR-85;Romania
+Type 90;Japan
+Type 96A/B;China
+Type 98/99;China
+Type 99A2;China
+Zulfiqar;Iran
