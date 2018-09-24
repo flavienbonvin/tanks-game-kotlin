@@ -1,6 +1,9 @@
-package util
+package main.kotlin.menu
 
-import res.REMAINING_TANKS
+import main.kotlin.game.initGame
+import main.kotlin.game.printEnemiesTanks
+import main.kotlin.game.shootEnemy
+import main.kotlin.resources.REMAINING_TANKS
 import kotlin.system.exitProcess
 
 fun startMenu() {

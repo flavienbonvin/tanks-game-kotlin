@@ -7,7 +7,7 @@ Ch'onma-ho 215/216;North Korea
 EE-T1/EE-T2 Osório;Brazil
 FV4030/4 Challenger 1;United Kingdom
 FV4030/4 Challenger 2;United Kingdom
-K1 88-obj.Tank;United State
+K1 88-main.kotlin.Tank;United State
 K1A1;South Korea
 Leopard 2;West Germany
 M-84;Yugoslavia

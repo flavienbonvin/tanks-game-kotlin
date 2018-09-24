@@ -1,13 +1,16 @@
-package util
+package main.kotlin.game
 
-import res.ENEMY_TANKS
-import res.NUMBER_ENEMIES
-import res.REMAINING_TANKS
+import main.kotlin.menu.askUserToEnterAInt
+import main.kotlin.menu.gameMenu
+import main.kotlin.resources.ENEMY_TANKS
+import main.kotlin.resources.NUMBER_ENEMIES
+import main.kotlin.resources.REMAINING_TANKS
 
 fun shootEnemy() {
     displayRemainingEnemies()
 
-    val shootNbr = askUserToEnterAInt("Which tank you want to attack? (0 to ${ENEMY_TANKS.size - 1}): ")
+    val shootNbr =
+        askUserToEnterAInt("Which tank you want to attack? (0 to ${ENEMY_TANKS.size - 1}): ")
 
     println()
 

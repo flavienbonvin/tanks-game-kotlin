@@ -1,10 +1,11 @@
-package util
+package main.kotlin.game
 
-import obj.Tank
-import res.ENEMY_TANKS
-import res.FILENAME_TANK_LIST
-import res.NUMBER_ENEMIES
-import res.REMAINING_TANKS
+import main.kotlin.menu.askUserToEnterAInt
+import main.kotlin.menu.gameMenu
+import main.kotlin.resources.ENEMY_TANKS
+import main.kotlin.resources.FILENAME_TANK_LIST
+import main.kotlin.resources.NUMBER_ENEMIES
+import main.kotlin.resources.REMAINING_TANKS
 import java.io.File
 
 fun initGame() {

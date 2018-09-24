@@ -1,4 +1,4 @@
-package util
+package main.kotlin.menu
 
 import java.lang.Exception
 import java.lang.NumberFormatException
